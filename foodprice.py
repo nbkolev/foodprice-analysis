@@ -164,8 +164,10 @@ def plot_quotients_for_all_places(product_name_list, sale_type_dividend, sale_ty
                 print(f"...skipping {place}")
 
         ax.legend()
+        out.write('<div style="page-break-inside: avoid">\n')
         out.write(f'<h3>Съотношение  {sale_type_dividend} / {sale_type_divisor} за "{product_name}"</h3>'
-                  f'{get_fig_svg(fig)}')
+                  f'{get_fig_svg(fig)}\n')
+        out.write('</div>\n')
         plt.close(fig)
 
 
